@@ -36,34 +36,39 @@ CREATE TABLE IF NOT EXISTS COMPO (
     CONSTRAINT FK_COMPO_BON FOREIGN KEY (ID_BON) REFERENCES BON(ID)
 );
 
-
-
-
-
-
-
-
-
 -- isert data
 
+--Fournisseur
 INSERT INTO FOURNISSEUR (ID, NOM) VALUES (1, 'Française d''Imports');
 
 INSERT INTO FOURNISSEUR (ID, NOM) VALUES (2, 'FDMSA');
 
 INSERT INTO FOURNISSEUR (ID, NOM) VALUES (3, 'Dubois & Fils');
 
+-- ou 
+
+INSERT INTO FOURNISSEUR (ID, NOM) 
+VALUES 
+(1, 'Française d''Imports'),
+(2, 'FDM SA'),
+(3, 'Dubois & Fils');
 
 
 
 
+--Compo
 INSERT INTO COMPO (ID_ART, ID_BON, QTE) VALUES (1, 1, 3);
 
 INSERT INTO COMPO (ID_ART, ID_BON, QTE) VALUES (5, 1, 4);
 
 INSERT INTO COMPO (ID_ART, ID_BON, QTE) VALUES (7, 1, 1);
 
+-- ou 
 
-
+INSERT INTO COMPO (ID_ART, ID_BON, QTE) VALUES
+(1, 1, 3),  
+(5, 1, 4), 
+(7, 1, 1);
 
 
 
